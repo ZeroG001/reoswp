@@ -123,31 +123,40 @@
 									<li> <i class="fa fa-times"> </i> Realtor.com </li>
 								</ul>
 
-								<!-- ====================== PAYMENT BUTTON ======================== -->
 
 
-								<button api_login_id="<?php echo APIKEY ?>"
-									method="schedule"
-									billing_company_name_attr="hide"
-									billing_street_line2_attr="hide"
-									save_token="true"
-									customer_token=""
-									payment_token=""
-									version_number="1.0"
-									utc_time="<?php echo $plan_basic->utc_time ?>"
-									hash_method="md5"
-									signature="<?php echo $plan_basic->create_signature() ?>"
-									callback="oncallback_sale"
-									total_amount="<?php echo $plan_basic->total_amount ?>"
-									schedule_start_date="<?php echo $schedule_begin ?>"
-									schedule_frequency="monthly"
-									schedule_continuous="true"
-									order_number="<?php echo $plan_basic->order_number ?>" >
-								    <span> Subscribe </span> 
-								</button>
+								<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="cmd" value="_s-xclick" />
+									<input type="hidden" name="hosted_button_id" value="5SXXXP66RP9RE" />
+									<input type="submit" value="Subscribe" name="submit" title="PayPal - The safer, easier way to pay online!" class="paypal_btn">
+									<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+								</form>
 
 
-							<!-- ====================== PAYMENT BUTTON ======================== -->
+
+								<!-- Forte Payment Button 							
+									<button api_login_id="<?php # echo APIKEY ?>"
+										method="schedule"
+										billing_company_name_attr="hide"
+										billing_street_line2_attr="hide"
+										save_token="true"
+										customer_token=""
+										payment_token=""
+										version_number="1.0"
+										utc_time="<?php # echo $plan_basic->utc_time ?>"
+										hash_method="md5"
+										signature="<?php # echo $plan_basic->create_signature() ?>"
+										callback="oncallback_sale"
+										total_amount="<?php # echo $plan_basic->total_amount ?>"
+										schedule_start_date="<?php # echo $schedule_begin ?>"
+										schedule_frequency="monthly"
+										schedule_continuous="true"
+										order_number="<?php # echo $plan_basic->order_number ?>" >
+									    <span> Subscribe </span> 
+									</button> 
+								-->
+
+
 
 							</div>
 
@@ -172,27 +181,35 @@
 									<li> <i class="fa fa-check"> </i> Legal Defense </li>
 									<li> <i class="fa fa-check"> </i> Realtor.com </li>
 								</ul>
+								
+								<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+									<input type="hidden" name="cmd" value="_s-xclick" />
+									<input type="hidden" name="hosted_button_id" value="L47C3P9WA7SMY" />
+									<input type="submit" value="Subscribe" name="submit" title="PayPal - The safer, easier way to pay online!" class="paypal_btn">
+									<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+								</form>
 
-
-								<button api_login_id="<?php echo APIKEY ?>"
-									method="schedule"
-									billing_company_name_attr="hide"
-									billing_street_line2_attr="hide"
-									save_token="true"
-									customer_token=""
-									payment_token=""
-									version_number="1.0"
-									utc_time="<?php echo $plan_premium->utc_time ?>"
-									hash_method="md5"
-									signature="<?php echo $plan_premium->create_signature() ?>"
-									callback="oncallback_sale"
-									total_amount="<?php echo $plan_premium->total_amount ?>"
-									schedule_start_date="<?php echo $schedule_begin ?>"
-									schedule_frequency="monthly"
-									schedule_continuous="true"
-									order_number="<?php echo $plan_premium->order_number ?>" >
-								    <span> Subscribe </span> 
-							    </button>
+								<!-- Forte Payment button							
+									<button api_login_id="<?php # echo APIKEY ?>"
+										method="schedule"
+										billing_company_name_attr="hide"
+										billing_street_line2_attr="hide"
+										save_token="true"
+										customer_token=""
+										payment_token=""
+										version_number="1.0"
+										utc_time="<?php # echo $plan_premium->utc_time ?>"
+										hash_method="md5"
+										signature="<?php # echo $plan_premium->create_signature() ?>"
+										callback="oncallback_sale"
+										total_amount="<?php # echo $plan_premium->total_amount ?>"
+										schedule_start_date="<?php # echo $schedule_begin ?>"
+										schedule_frequency="monthly"
+										schedule_continuous="true"
+										order_number="<?php # echo $plan_premium->order_number ?>" >
+									    <span> Subscribe </span> 
+							    	</button> 
+								-->
 
 							</div>
 						</div>

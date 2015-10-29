@@ -163,7 +163,7 @@ border-right: 1px solid #D8D8D8;
 }
 
 /* This is the forte button */
-.pay-content-box button {
+.pay-content-box button, .pay-content-box .paypal_btn {
 
 	bottom: 1rem;
 	width: 90%;
@@ -172,6 +172,7 @@ border-right: 1px solid #D8D8D8;
 	border-radius: 4px;
 	letter-spacing: 0.05rem;
 	display: block;
+	color: white;
 
 
 	margin: 10px auto;
@@ -179,7 +180,7 @@ border-right: 1px solid #D8D8D8;
 	border: #BCE8F1;
 }
 
-.pay-content-box button:hover {
+.pay-content-box button:hover, .pay-content-box .paypal_btn:hover {
 	background-color: #208DEC;
 
 	-webkit-transition: 0.2s ease;
