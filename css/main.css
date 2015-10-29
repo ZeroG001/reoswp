@@ -188,6 +188,14 @@ border-right: 1px solid #D8D8D8;
 	-o-transition: 0.2s ease;
 }
 
+.pay-content-box input[type="test"] {
+	display: block;
+	border: 1px solid black;
+	width: 80px;
+	height: 30px;
+	margin: 0px auto;
+}
+
 .pay-content-box .price-header {
 	line-height: 0.2;
 	font-weight: 100;

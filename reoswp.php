@@ -221,8 +221,29 @@
 
 								<h3> Specify monthly payment</h3>
 
+								<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+								<input type="test" name="a3" size=7 maxlength=10 value="0.00" />&nbsp;&nbsp;
 
-								<button api_login_id="<?php echo APIKEY ?>"
+								<input type="submit" value="Subscribe" name="submit" title="PayPal - The safer, easier way to pay online!" class="paypal_btn">
+								<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+								<input type="hidden" name="cmd" value="_xclick-subscriptions" />
+								<input type="hidden" name="business" value="ar@realestateone.com" />
+								<input type="hidden" name="item_name" value="Sales Associate Directed Subscription" />
+								<input type="hidden" name="item_number" value="Amount selected by sales associate" />
+								<input type="hidden" name="no_shipping" value="1" />
+								<input type="hidden" name="no_note" value="1" />
+								<input type="hidden" name="currency_code" value="USD" />
+
+								<input type="hidden" name="lc" value="US" />
+								<input type="hidden" name="bn" value="PP-SubscriptionsBF" />
+								<input type="hidden" name="p3" value="1" />
+								<input type="hidden" name="t3" value="M" />
+								<input type="hidden" name="src" value="1" />
+								<input type="hidden" name="sra" value="1" />
+								</form>
+
+								<!-- Forte Payment System Button
+								<button api_login_id="<?php # echo APIKEY ?>"
 									method="schedule"
 									billing_company_name_attr="hide"
 									billing_street_line2_attr="hide"
@@ -230,18 +251,18 @@
 									customer_token=""
 									payment_token=""
 									version_number="1.0"
-									utc_time="<?php echo $plan_custom->utc_time ?>"
+									utc_time="<?php # echo $plan_custom->utc_time ?>"
 									hash_method="md5"
-									signature="<?php echo $plan_custom->create_signature() ?>"
+									signature="<?php # echo $plan_custom->create_signature() ?>"
 									callback="oncallback_schedule"
 									total_amount=""
-									schedule_start_date="<?php echo $schedule_begin ?>"
+									schedule_start_date="<?php # echo $schedule_begin ?>"
 									schedule_frequency="monthly"
 									schedule_continuous="true"
-									order_number="<?php echo $plan_custom->order_number ?>">
+									order_number="<?php # echo $plan_custom->order_number ?>">
 								    <span> Subscribe </span>
 								</button>
-
+ 								-->
 							</div>
 
 						</div>
@@ -374,6 +395,8 @@
 								</button>
 
 							</div>
+
+							<button
 
 						</div>
 
