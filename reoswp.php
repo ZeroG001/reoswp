@@ -43,7 +43,7 @@
 				<p class="pay-section-description">
 					Real Estate One is proud to offer another payment alternative for our Sales Associates.  
 					Below you will find several options to pay your accounts receivable balances by credit card or bank draft (where applicable) through PayPal.
-					Please note that by using any of the payment options listed below, you agree to the Terms and Conditions listed at the bottom of this page.
+					Please note that by using any of the payment options listed below, you agree to the <a href="#terms-section"> Terms and Conditions </a> listed at the bottom of this page.
 				</p>
 
 
@@ -83,7 +83,7 @@
 								Use this option to make a payment on account. 
 								Enter the AMOUNT DUE, as shown on the Real Estate One Invoice/Statement, in the box below and click the Pay Now button. 
 								Additionally, payments greater than the amount due are also accepted (pay in advance, carry a credit balance, and not worry about due dates, late fees and interest). 
-								See additional terms and conditions below. 
+								See additional <a href="#terms-section"> Terms and Conditions </a> below. 
 							</p>
 
 						</div>
@@ -101,7 +101,7 @@
 					<p class="pay-section-description">
 						Why not take advantage of our convenient auto pay service?
 						Select one of the options below and have the amount automatically deducted each month.
-						Charges will recur approximately every 30 days from the date you sign up.  See additional terms and conditions below.
+						Charges will recur approximately every 30 days from the date you sign up.  See additional <a href="#terms-section"> Terms and Conditions </a> below.
 					</p>
 
 					<div class="row">
@@ -202,7 +202,7 @@
 
 							<div class="pay-content-box box-small">
 
-								<h3> Custom Monthly Payment </h3>
+								<h3> Specify monthly payment</h3>
 
 
 								<button api_login_id="<?php echo APIKEY ?>"
@@ -234,7 +234,7 @@
 					<p class="pay-section-description">
 						Subscribe using another amount.  This is useful if your receivable balance runs a little higher than one of the options above. 
 						Enter the amount you wish to have deducted below and have the amount automatically deducted each month. 
-						See additional terms and conditionsbelow.
+						See additional <a href="#terms-section"> Terms and Conditions </a> below.
 					</p>
 
 
@@ -246,9 +246,9 @@
 					<h2 class="pay-section-header">  Annual Payment - Best Offer </h2>
 
 					<p class="pay-section-description">
-						Receive 12 months of service for the price of 11.  If your account is current and you have the resources to pay a year in advance, why not take advantage of this option?
-						See terms and conditions below. We have recently changed the options below. 
-						If you experience problems, please contact Joshua Lowry at jlowry@realestateone.com or 248-208-2929
+						<strong> Receive 12 months of service for the price of 11 </strong>.  If your account is current and you have the resources to pay a year in advance, why not take advantage of this option?
+						See <a href="#terms-section"> Terms and Conditions </a> below. <strong> We have recently changed the options below.
+						If you experience problems, please contact Joshua Lowry at jlowry@realestateone.com or 248-208-2929 </strong>
 					</p>
 
 					<div class="row">
@@ -258,7 +258,7 @@
 						
 							<div class="pay-content-box box-small">
 
-								<h3> Realtor.com </h3>
+								<h3> Annual Realtor.com </h3>
 
 								<h3 class="price-header"> <span>$</span>27<span>x11</span> </h3>
 
