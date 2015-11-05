@@ -20,7 +20,7 @@
 
 		<link rel="stylesheet" type="text/css" href="css/vendor/sk_grid.css" />
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
-		<script type="text/javascript" src="https://checkout.forte.net/v1/js"> </script>
+		<script type="text/javascript" src="https://sandbox.forte.net/checkout/v1/js"> </script>
 
 	</head>
 
@@ -66,7 +66,10 @@
 									signature="<?php echo $quick_pay->create_signature() ?>"
 									callback="oncallback_sale"
 									total_amount=""
-									order_number="<?php echo $quick_pay->order_number ?>">
+									order_number="<?php echo $quick_pay->order_number ?>"
+									xdata_1="123456"
+									xdata_2="34353"
+									xdata_3="Hello World, this is a comment, I have a limit of 80 characters.">
 								    <span>Pay Now</span> 
 								</button>
 
