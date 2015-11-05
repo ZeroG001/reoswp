@@ -96,7 +96,7 @@
 
 				<section class="pay_category">
 
-					<h2 class="pay-section-header"> Schedule Pay - Monthly </h2>
+					<h2 class="pay-section-header"> Schedule Pay (Monthly) </h2>
 
 					<p class="pay-section-description">
 						Why not take advantage of our convenient auto pay service?
@@ -395,8 +395,6 @@
 								</button>
 
 							</div>
-
-							<button
 
 						</div>
 
