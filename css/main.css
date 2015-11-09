@@ -163,7 +163,8 @@ border-right: 1px solid #D8D8D8;
 }
 
 /* This is the forte button */
-.pay-content-box button, .pay-content-box .paypal_btn {
+.pay-content-box .pay-content-button , 
+.pay-content-box .paypal_btn {
 
 	bottom: 1rem;
 	width: 90%;
@@ -173,14 +174,14 @@ border-right: 1px solid #D8D8D8;
 	letter-spacing: 0.05rem;
 	display: block;
 	color: white;
-
-
 	margin: 10px auto;
 	background-color: #006DCC;
 	border: #BCE8F1;
 }
 
-.pay-content-box button:hover, .pay-content-box .paypal_btn:hover {
+
+.pay-content-box .pay-content-button:hover, 
+.pay-content-box .paypal_btn:hover {
 	background-color: #208DEC;
 
 	-webkit-transition: 0.2s ease;
@@ -258,4 +259,92 @@ border-right: 1px solid #D8D8D8;
 
 .fa.fa-times {
 	color: red;
+}
+
+
+/* Modal Styles
+========================== */
+
+.modal-popup {
+	display: inline;
+	/*display: none;*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	z-index: 10;
+}
+
+.modal-content {
+    margin-top: -293px;
+    margin-left: -225px;
+    opacity: 1;
+    position: fixed;
+    transform: translateY(0) scale(1);
+    transition: none 0 ease 0;
+    left: 50%;
+    top: 50%;
+    width: 450px;
+    height: 580px;
+    border-top: 4px solid #418bca;
+    border-left: 1px solid #778180;
+    border-right: 1px solid #778180;
+    border-bottom: 1px solid #778180;
+    background-color: #fff;
+    padding: 24px 43px 0px 24px;
+}
+
+.modal-header {
+	position: relative;
+}
+
+.modal_close {
+    background-color: rgba(0,0,0,0)!important;
+    background-image: url("https://s3.amazonaws.com/public.forte.prod/fc.images/close-btn.png");
+    background-repeat: no-repeat;
+    border: 0 solid;
+    color: rgba(0,0,0,0);
+    cursor: pointer;
+    /*float: right;*/
+    height: 33px;
+    /*left: 413px;*/
+    /*line-height: 15px;*/
+    /*margin-right: -10px;*/
+    margin-top: 6px;
+    right: 0px;
+    bottom: 0px;
+    opacity: .9;
+    padding: 0;
+    position: absolute;
+    width: 33px;
+   /* z-index: 2147483647;*/
+}
+
+.legend {
+    border-bottom-color: #e5e5e5;
+    border-top-color: #fff;
+    border-image: none;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    display: block;
+    padding-bottom: 8px;
+    width: 363px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.input-field {
+	border: 1px solid #ccc;
+    color: #555;
+    display: inline-block;
+    height: 30px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding: 4px 6px;
+    margin-left: 0;
+    font-weight: normal;
+    display: block;
+    width: 100%;
 }

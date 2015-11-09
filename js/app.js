@@ -50,3 +50,9 @@ function oncallback_sale(response) {
 // =============== CONNECTION FAILURE []
 // =============== INFORAMTION INVALID []
 // Check the swp documentation for 
+
+(function($){
+
+	console.log("app.js started");
+
+})(jQuery)

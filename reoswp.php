@@ -11,14 +11,13 @@
 	<head> 
 		<title>REO Intranet</title> 
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<link rel="stylesheet" type="text/css" href="css/sk_grid.css"> <!-- Docs. - http://getskeleton.com/ -->
+		<link rel="stylesheet" type="text/css" href="css/vendor/sk_grid.css"> <!-- Docs. - http://getskeleton.com/ -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<script type="text/javascript" src="js/vendor/parsley.min.js"></script>
+		<!-- <script type="text/javascript" src="js/vendor/parsley.min.js"></script> -->
 		<link rel="stylesheet" type="text/css" href="css/vendor/font-awesome/css/font-awesome.min.css">
 
 		<title>REO Payment System</title>
 
-		<link rel="stylesheet" type="text/css" href="css/vendor/sk_grid.css" />
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<script type="text/javascript" src="https://sandbox.forte.net/checkout/v1/js"> </script>
 
@@ -55,7 +54,38 @@
 								<!-- Pay Now -->
 								<h3> Quick Pay </h3>
 
+								<button class="open" id="modalid">
+									Click Here
+								</button>
+
+								<div class="modal-popup">
+								
+
+									<div class="modal-content">
+										<div class="modal-header">
+										<h4>Test\REO Online Payment</h4>
+										<button class="modal_close">×</button>
+										</div>
+
+										<div class="modal-body">
+											<div class="legend">
+												<span> Enter Info Here</span>
+											</div>
+											<input type="text" class="input-field" placeholder="Pay Number"/>
+											<input type="text" class="input-field" placeholder="Lisence Number" />
+											<p> This this box </p>
+										</div>
+
+										<div class="modal-footer">
+										<button> </button>
+											<p> This is the foot </p>
+										</div>
+									</div>
+
+								</div>
+
 								<button api_login_id="<?php echo APIKEY ?>"
+									class="pay-content-button"
 									method="sale"
 									billing_company_name_attr="hide"
 									billing_street_line2_attr="hide"
@@ -305,6 +335,7 @@
 
 								<button api_login_id="<?php echo APIKEY ?>"
 									method="sale"
+									class="pay-content-button"
 									billing_company_name_attr="hide"
 									billing_street_line2_attr="hide"
 									version_number="1.0"
@@ -333,6 +364,7 @@
 
 								<button api_login_id="<?php echo APIKEY ?>"
 									method="sale"
+									class="pay-content-button"
 									billing_company_name_attr="hide"
 									billing_street_line2_attr="hide"
 									version_number="1.0"
@@ -359,6 +391,7 @@
 
 								<button api_login_id="<?php echo APIKEY ?>"
 									method="sale"
+									class="pay-content-button"
 									billing_company_name_attr="hide"
 									billing_street_line2_attr="hide"
 									version_number="1.0"
@@ -385,6 +418,7 @@
 
 								<button api_login_id="<?php echo APIKEY ?>"
 									method="sale"
+									class="pay-content-button"
 									billing_company_name_attr="hide"
 									billing_street_line2_attr="hide"
 									version_number="1.0"
