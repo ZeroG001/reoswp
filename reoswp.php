@@ -39,11 +39,11 @@
 
 				<section class="pay_category">
 
-				<p class="pay-section-description">
-					Real Estate One is proud to offer another payment alternative for our Sales Associates.  
-					Below you will find several options to pay your accounts receivable balances by credit card or bank draft (where applicable) through PayPal.
-					Please note that by using any of the payment options listed below, you agree to the <a href="#terms-section"> Terms and Conditions </a> listed at the bottom of this page.
-				</p>
+					<p class="pay-section-description">
+						Real Estate One is proud to offer another payment alternative for our Sales Associates.  
+						Below you will find several options to pay your accounts receivable balances by credit card or bank draft (where applicable) through PayPal.
+						Please note that by using any of the payment options listed below, you agree to the <a href="#terms-section"> Terms and Conditions </a> listed at the bottom of this page.
+					</p>
 
 
 					<div class="row">
@@ -54,13 +54,16 @@
 								<!-- Pay Now -->
 								<h3> Quick Pay </h3>
 
-								<button class="open" id="modalid">
+
+								<!-- 
+									swp-modal-popup *HAS* to be "next" for any of this to work :/	
+								-->
+								<button class="swp-modal-open">
 									Click Here
 								</button>
 
-								<div class="swp-modal-popup" id="swp-modal-1">
+								<div class="swp-modal-popup">
 								
-
 									<div class="swp-modal-content">
 										<div class="swp-modal-header">
 										<h4>Test\REO Online Payment</h4>
@@ -74,6 +77,7 @@
 											<input type="text" class="input-field" placeholder="Pay Number" />
 											<input type="text" class="input-field" placeholder="Lisence Number" />
 										</div>
+
 
 										<div class="swp-modal-footer">
 											<button api_login_id="<?php echo APIKEY ?>"
@@ -94,30 +98,12 @@
 												xdata_3="Hello World, this is a comment, I have a limit of 80 characters.">
 											    </span>Next<span>
 											</button>
+
 										</div>
 
 									</div>
 
 								</div> <!-- Modal Popup End -->
-
-								<button api_login_id="<?php echo APIKEY ?>"
-									class="pay-content-button"
-									method="sale"
-									billing_company_name_attr="hide"
-									billing_street_line2_attr="hide"
-									version_number="1.0"
-									test_field=""
-									utc_time="<?php echo $quick_pay->utc_time ?>"
-									hash_method="md5"
-									signature="<?php echo $quick_pay->create_signature() ?>"
-									callback="oncallback_sale"
-									total_amount=""
-									order_number="<?php echo $quick_pay->order_number ?>"
-									xdata_1="123456"
-									xdata_2="34353"
-									xdata_3="Hello World, this is a comment, I have a limit of 80 characters.">
-								    <span>Pay Now</span> 
-								</button>
 
 							</div> <!-- Content box end -->
 
@@ -126,7 +112,6 @@
 						<div class="eight columns">
 
 							<h2 class="pay-section-header"> Quick Pay </h2>
-
 
 							<p>
 								Use this option to make a payment on account. 
@@ -345,26 +330,59 @@
 						
 							<div class="pay-content-box box-small">
 
+
 								<h3> Annual Realtor.com </h3>
 
 								<h3 class="price-header"> <span>$</span>27<span>x11</span> </h3>
 
-								<button api_login_id="<?php echo APIKEY ?>"
-									method="sale"
-									class="pay-content-button"
-									billing_company_name_attr="hide"
-									billing_street_line2_attr="hide"
-									version_number="1.0"
-									utc_time="<?php echo $annual_realtor->utc_time ?>"
-									hash_method="md5"
-									signature="<?php echo $annual_realtor->create_signature() ?>"
-									callback="oncallback_sale"
-									total_amount="<?php echo $annual_realtor->total_amount ?>"
-									order_number="<?php echo $annual_realtor->order_number ?>">
-								    <span> Buy Now </span> 
-
-
+								<button class="swp-modal-open">
+									Click Here
 								</button>
+
+								<div class="swp-modal-popup">
+								
+									<div class="swp-modal-content">
+										<div class="swp-modal-header">
+										<h4>Test\REO Online Payment</h4>
+										<button class="swp-modal_close">×</button>
+										</div>
+
+										<div class="swp-modal-body">
+											<div class="legend">
+												<span> Please enter your info </span>
+											</div>
+											<input type="text" class="input-field" placeholder="Pay Number" />
+											<input type="text" class="input-field" placeholder="Lisence Number" />
+										</div>
+
+
+										<div class="swp-modal-footer">
+
+											<button api_login_id="<?php echo APIKEY ?>"
+												method="sale"
+												class="swp-modal-button"
+												billing_company_name_attr="hide"
+												billing_street_line2_attr="hide"
+												version_number="1.0"
+												utc_time="<?php echo $annual_realtor->utc_time ?>"
+												hash_method="md5"
+												signature="<?php echo $annual_realtor->create_signature() ?>"
+												callback="oncallback_sale"
+												total_amount="<?php echo $annual_realtor->total_amount ?>"
+												order_number="<?php echo $annual_realtor->order_number ?>"
+												xdata_1="123456"
+												xdata_2="34353"
+												xdata_3="Hello World, this is a comment, I have a limit of 80 characters.">
+											    <span> Buy Now </span> 
+											</button>
+
+										</div>
+
+									</div>
+
+								</div> <!-- Modal Popup End -->
+
+
 
 							</div>
 
@@ -378,22 +396,57 @@
 
 								<h3 class="price-header"><span>$</span>35<span>x11<span> </h3>
 
-								<button api_login_id="<?php echo APIKEY ?>"
-									method="sale"
-									class="pay-content-button"
-									billing_company_name_attr="hide"
-									billing_street_line2_attr="hide"
-									version_number="1.0"
-									utc_time="<?php echo $annual_tech->utc_time ?>"
-									hash_method="md5"
-									signature="<?php echo $annual_tech->create_signature() ?>"
-									callback="oncallback_sale"
-									total_amount="<?php echo $annual_tech->total_amount ?>"
-									order_number="<?php echo $annual_tech->order_number ?>" >
-								    <span> Buy Now </span>
+
+								<button class="swp-modal-open">
+									Click Here
 								</button>
 
-							</div>
+								<div class="swp-modal-popup">
+								
+									<div class="swp-modal-content">
+
+										<div class="swp-modal-header">
+											<h4>Test\REO Online Payment</h4>
+											<button class="swp-modal_close">×</button>
+										</div>
+
+										<div class="swp-modal-body">
+
+											<div class="legend">
+												<span> Please enter your info </span>
+											</div>
+
+											<input type="text" class="input-field" placeholder="Pay Number" />
+											<input type="text" class="input-field" placeholder="Lisence Number" />
+										</div>
+
+										<div class="swp-modal-footer">
+
+											<button api_login_id="<?php echo APIKEY ?>"
+												method="sale"
+												class="swp-modal-button"
+												billing_company_name_attr="hide"
+												billing_street_line2_attr="hide"
+												version_number="1.0"
+												utc_time="<?php echo $annual_tech->utc_time ?>"
+												hash_method="md5"
+												signature="<?php echo $annual_tech->create_signature() ?>"
+												callback="oncallback_sale"
+												total_amount="<?php echo $annual_tech->total_amount ?>"
+												order_number="<?php echo $annual_tech->order_number ?>"
+												xdata_1="123456"
+												xdata_2="34353"
+												xdata_3="Hello World, this is a comment, I have a limit of 80 characters.">
+											    <span> Buy Now </span>
+											</button>
+
+										</div>
+
+									</div>
+
+								</div> <!-- Modal Popup End -->
+
+							</div> <!-- content box end -->
 
 						</div>
 
@@ -405,20 +458,56 @@
 
 								<h3 class="price-header"> <span>$</span>37<span>x11</span> </h3>
 
-								<button api_login_id="<?php echo APIKEY ?>"
-									method="sale"
-									class="pay-content-button"
-									billing_company_name_attr="hide"
-									billing_street_line2_attr="hide"
-									version_number="1.0"
-									utc_time="<?php echo $annual_legal->utc_time ?>"
-									hash_method="md5"
-									signature="<?php echo $annual_legal->create_signature() ?>"
-									callback="oncallback_sale"
-									total_amount="<?php echo $annual_legal->total_amount ?>"
-									order_number="<?php echo $annual_legal->order_number ?>">
-								    <span> Buy Now </span>
+								<button class="swp-modal-open">
+									Click Here
 								</button>
+
+
+								<div class="swp-modal-popup">
+								
+									<div class="swp-modal-content">
+
+										<div class="swp-modal-header">
+											<h4>Test\REO Online Payment</h4>
+											<button class="swp-modal_close">×</button>
+										</div>
+
+										<div class="swp-modal-body">
+
+											<div class="legend">
+												<span> Please enter your info </span>
+											</div>
+
+											<input type="text" class="input-field" placeholder="Pay Number" />
+											<input type="text" class="input-field" placeholder="Lisence Number" />
+										</div>
+
+										<div class="swp-modal-footer">
+
+											<button api_login_id="<?php echo APIKEY ?>"
+												method="sale"
+												class="swp-modal-button"
+												billing_company_name_attr="hide"
+												billing_street_line2_attr="hide"
+												version_number="1.0"
+												utc_time="<?php echo $annual_legal->utc_time ?>"
+												hash_method="md5"
+												signature="<?php echo $annual_legal->create_signature() ?>"
+												callback="oncallback_sale"
+												total_amount="<?php echo $annual_legal->total_amount ?>"
+												order_number="<?php echo $annual_legal->order_number ?>"							
+												xdata_1="123456"
+												xdata_2="34353"
+												xdata_3="Hello World, this is a comment, I have a limit of 80 characters.">
+											    <span> Buy Now </span>
+											</button>
+
+										</div>
+
+									</div>
+
+								</div> <!-- Modal Popup End -->
+
 
 							</div>
 
@@ -432,20 +521,54 @@
 
 								<h3 class="price-header"> <span>$</span>9.95<span>x11</span> </h3>
 
-								<button api_login_id="<?php echo APIKEY ?>"
-									method="sale"
-									class="pay-content-button"
-									billing_company_name_attr="hide"
-									billing_street_line2_attr="hide"
-									version_number="1.0"
-									utc_time="<?php echo $annual_cma->utc_time ?>"
-									hash_method="md5"
-									signature="<?php echo $annual_cma->create_signature() ?>"
-									callback="oncallback_sale"
-									total_amount="<?php echo $annual_cma->total_amount ?>"
-									order_number="<?php echo $annual_cma->order_number ?>">
-								    <span> Buy Now </span>
+								<button class="swp-modal-open">
+									Click Here
 								</button>
+
+								<div class="swp-modal-popup">
+								
+									<div class="swp-modal-content">
+
+										<div class="swp-modal-header">
+											<h4>Test\REO Online Payment</h4>
+											<button class="swp-modal_close">×</button>
+										</div>
+
+										<div class="swp-modal-body">
+
+											<div class="legend">
+												<span> Please enter your info </span>
+											</div>
+
+											<input type="text" class="input-field" placeholder="Pay Number" />
+											<input type="text" class="input-field" placeholder="Lisence Number" />
+										</div>
+
+										<div class="swp-modal-footer">
+
+											<button api_login_id="<?php echo APIKEY ?>"
+												method="sale"
+												class="swp-modal-button"
+												billing_company_name_attr="hide"
+												billing_street_line2_attr="hide"
+												version_number="1.0"
+												utc_time="<?php echo $annual_cma->utc_time ?>"
+												hash_method="md5"
+												signature="<?php echo $annual_cma->create_signature() ?>"
+												callback="oncallback_sale"
+												total_amount="<?php echo $annual_cma->total_amount ?>"
+												order_number="<?php echo $annual_cma->order_number ?>"
+												xdata_1="123456"
+												xdata_2="34353"
+												xdata_3="Hello World, this is a comment, I have a limit of 80 characters.">
+											    <span> Buy Now </span>
+											</button>
+
+										</div>
+
+									</div>
+
+								</div> <!-- Modal Popup End -->
 
 							</div>
 

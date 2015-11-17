@@ -43,25 +43,22 @@ function oncallback_sale(response) {
 			console.log(response);
 		}
 
-// Response returns certain codes based on how the transaction goes. 
-// Error handle for these situations
-// =============== PAYMENT DECLINED []
-// =============== PAYMENT SUCCESS []
-// =============== CONNECTION FAILURE []
-// =============== INFORAMTION INVALID []
-// Check the swp documentation for 
-
 (function($) {
 
+
+// ------------------- Payment Modal ------------------------
 // Close modal when finished
+
+// Each modal popup is going to have its own id
 $('.swp-modal_close').click(function(){
 	$('.swp-modal-popup').removeClass("fade-in");
 });
 
 
 // Use CSS to display and close the
-$('#modalid').click(function(){
-	$('.swp-modal-popup').addClass("fade-in");
+// When Clicked. The modal next to the button is opened
+$('.swp-modal-open').click(function(){
+	$(this).next('.swp-modal-popup').addClass('fade-in');
 });
 
 
@@ -70,6 +67,8 @@ $('.swp-modal-button').click(function(){
 	$('.swp-modal-popup').removeClass("fade-in");
 });
 
+
+//----------------------------------------------------
 
 
 

@@ -35,7 +35,7 @@ border-right: 1px solid #D8D8D8;
 .pay-flash-message {
 	z-index: 40;
 	position: fixed;
-	display: block;
+	display: none;
 	margin: 0px auto;
 	top: 1rem;
 	left: 0;
@@ -77,6 +77,7 @@ border-right: 1px solid #D8D8D8;
 	-o-transition: 0.5s ease;
 	transition: 0.5s ease;
 
+	display: block;
 	color: #31708F;
 	background-color: #D9EDF7;
 	border-color: #BCE8F1;	
@@ -89,6 +90,7 @@ border-right: 1px solid #D8D8D8;
 	-o-transition: 0.5s ease;
 	transition: 0.5s ease;
 
+	display: block;
 	color: #3C763D;
 	background-color: #DFF0D8;
 	border-color: #D6E9C6;
@@ -101,11 +103,11 @@ border-right: 1px solid #D8D8D8;
 	-o-transition: 0.5s ease;
 	transition: 0.5s ease;
 
+	display: block;
 	color: #A94442;
 	background-color: #F2DEDE;
 	border-color: #EBCCD1;
 }
-
 
 
 .pay_category {
@@ -162,8 +164,9 @@ border-right: 1px solid #D8D8D8;
 	
 }
 
-/* This is the forte button */
-.pay-content-box .pay-content-button , 
+/* --------- This is the forte button ------- */
+.pay-content-box .pay-content-button ,
+.swp-modal-open,
 .pay-content-box .paypal_btn {
 
 	bottom: 1rem;
@@ -181,6 +184,7 @@ border-right: 1px solid #D8D8D8;
 
 
 .pay-content-box .pay-content-button:hover, 
+.swp-modal-open:hover,
 .pay-content-box .paypal_btn:hover {
 	background-color: #208DEC;
 
@@ -483,4 +487,12 @@ border-right: 1px solid #D8D8D8;
 	@keyframes fadeout {
 		from { opacity: 1; }
 		to { opacity: 0; }
+	}
+
+
+	/* Media Queries
+	===========================*/
+
+	@media screen and (min-width: 756px) {
+
 	}
