@@ -58,31 +58,47 @@
 									Click Here
 								</button>
 
-								<div class="modal-popup">
+								<div class="swp-modal-popup" id="swp-modal-1">
 								
 
-									<div class="modal-content">
-										<div class="modal-header">
+									<div class="swp-modal-content">
+										<div class="swp-modal-header">
 										<h4>Test\REO Online Payment</h4>
-										<button class="modal_close">×</button>
+										<button class="swp-modal_close">×</button>
 										</div>
 
-										<div class="modal-body">
+										<div class="swp-modal-body">
 											<div class="legend">
-												<span> Enter Info Here</span>
+												<span> Please enter your info </span>
 											</div>
-											<input type="text" class="input-field" placeholder="Pay Number"/>
+											<input type="text" class="input-field" placeholder="Pay Number" />
 											<input type="text" class="input-field" placeholder="Lisence Number" />
-											<p> This this box </p>
 										</div>
 
-										<div class="modal-footer">
-										<button> </button>
-											<p> This is the foot </p>
+										<div class="swp-modal-footer">
+											<button api_login_id="<?php echo APIKEY ?>"
+												class="swp-modal-button"
+												method="sale"
+												billing_company_name_attr="hide"
+												billing_street_line2_attr="hide"
+												version_number="1.0"
+												test_field=""
+												utc_time="<?php echo $quick_pay->utc_time ?>"
+												hash_method="md5"
+												signature="<?php echo $quick_pay->create_signature() ?>"
+												callback="oncallback_sale"
+												total_amount=""
+												order_number="<?php echo $quick_pay->order_number ?>"
+												xdata_1="123456"
+												xdata_2="34353"
+												xdata_3="Hello World, this is a comment, I have a limit of 80 characters.">
+											    </span>Next<span>
+											</button>
 										</div>
+
 									</div>
 
-								</div>
+								</div> <!-- Modal Popup End -->
 
 								<button api_login_id="<?php echo APIKEY ?>"
 									class="pay-content-button"
@@ -103,7 +119,7 @@
 								    <span>Pay Now</span> 
 								</button>
 
-							</div>
+							</div> <!-- Content box end -->
 
 						</div>
 

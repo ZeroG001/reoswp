@@ -51,8 +51,28 @@ function oncallback_sale(response) {
 // =============== INFORAMTION INVALID []
 // Check the swp documentation for 
 
-(function($){
+(function($) {
 
-	console.log("app.js started");
+// Close modal when finished
+$('.swp-modal_close').click(function(){
+	$('.swp-modal-popup').removeClass("fade-in");
+});
+
+
+// Use CSS to display and close the
+$('#modalid').click(function(){
+	$('.swp-modal-popup').addClass("fade-in");
+});
+
+
+// When the next button is clicked the payment page shows up.
+$('.swp-modal-button').click(function(){
+	$('.swp-modal-popup').removeClass("fade-in");
+});
+
+
+
+
+
 
 })(jQuery)
