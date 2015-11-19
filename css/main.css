@@ -293,7 +293,7 @@ border-right: 1px solid #D8D8D8;
     left: 50%;
     top: 50%;
     width: 452px;
-    height: 270px;
+    height: 370px;
     /*height: 580px;*/
     border-top: 4px solid #418bca;
     border-left: 1px solid #778180;
@@ -391,7 +391,7 @@ border-right: 1px solid #D8D8D8;
     margin-bottom: 10px;
 }
 
-.input-field {
+.modal-input-field {
 	border: 1px solid #ccc;
     color: #555;
     display: inline-block;
@@ -403,6 +403,11 @@ border-right: 1px solid #D8D8D8;
     font-weight: normal;
     display: block;
     width: 100%;
+}
+
+textarea.modal-input-field {
+	height: 110px;
+	resize: none;
 }
 
 /* Animation Class 

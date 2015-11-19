@@ -46,6 +46,19 @@ function oncallback_sale(response) {
 (function($) {
 
 
+	var validate = {
+		"paynum_format" : new regEx('/\d{5}/'),
+		"paynumber" : function(string){
+			if(string.match(this.paynum_format)) {
+				alert("it matches");
+			} else {
+				alert("It dont match");
+			}
+		},
+
+	}
+
+
 // ------------------- Payment Modal ------------------------
 // Close modal when finished
 
@@ -67,6 +80,18 @@ $('.swp-modal-button').click(function(){
 	$('.swp-modal-popup').removeClass("fade-in");
 });
 
+// When you enter text in modal popup, that info is carried over to the forte button
+$('.modal-input-field.xdata_1').keyup(function(e){
+	$('.swp-modal-button').attr('xdata_1', $(this).val());
+});
+
+$('.modal-input-field.xdata_2').keyup(function(e){
+	$('.swp-modal-button').attr('xdata_2', $(this).val());
+});
+
+$('.modal-input-field.xdata_3').keyup(function(e) {
+	$('.swp-modal-button').attr('xdata_3', $(this).val());
+});
 
 //----------------------------------------------------
 

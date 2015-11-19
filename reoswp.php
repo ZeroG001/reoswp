@@ -74,8 +74,9 @@
 											<div class="legend">
 												<span> Please enter your info </span>
 											</div>
-											<input type="text" class="input-field" placeholder="Pay Number" />
-											<input type="text" class="input-field" placeholder="Lisence Number" />
+											<input type="text" class="modal-input-field xdata_1" placeholder="Lisence Number" />
+											<input type="text" class="modal-input-field xdata_2" placeholder="Pay Number" />
+											<textarea class="modal-input-field xdata_3" maxlength="80" placeholder="Comments (80 Characters)"></textarea>
 										</div>
 
 
@@ -93,9 +94,9 @@
 												callback="oncallback_sale"
 												total_amount=""
 												order_number="<?php echo $quick_pay->order_number ?>"
-												xdata_1="123456"
-												xdata_2="34353"
-												xdata_3="Hello World, this is a comment, I have a limit of 80 characters.">
+												xdata_1="n/a"
+												xdata_2="n/a"
+												xdata_3="">
 											    </span>Next<span>
 											</button>
 
@@ -351,8 +352,9 @@
 											<div class="legend">
 												<span> Please enter your info </span>
 											</div>
-											<input type="text" class="input-field" placeholder="Pay Number" />
-											<input type="text" class="input-field" placeholder="Lisence Number" />
+											<input type="text" class="modal-input-field" placeholder="Lisence Number" />
+											<input type="text" class="modal-input-field" placeholder="Pay Number" />
+											<textarea placeholder="Comments (80 Characters)" maxlength="80" class="modal-input-field"></textarea>
 										</div>
 
 
@@ -370,9 +372,9 @@
 												callback="oncallback_sale"
 												total_amount="<?php echo $annual_realtor->total_amount ?>"
 												order_number="<?php echo $annual_realtor->order_number ?>"
-												xdata_1="123456"
-												xdata_2="34353"
-												xdata_3="Hello World, this is a comment, I have a limit of 80 characters.">
+												xdata_1="n/a"
+												xdata_2="n/a"
+												xdata_3="">
 											    <span> Buy Now </span> 
 											</button>
 
@@ -416,8 +418,9 @@
 												<span> Please enter your info </span>
 											</div>
 
-											<input type="text" class="input-field" placeholder="Pay Number" />
-											<input type="text" class="input-field" placeholder="Lisence Number" />
+											<input type="text" class="modal-input-field" placeholder="Lisence Number" />
+											<input type="text" class="modal-input-field" placeholder="Pay Number" />
+											<textarea placeholder="Comments (80 Characters)" maxlength="80" class="modal-input-field"></textarea>
 										</div>
 
 										<div class="swp-modal-footer">
@@ -434,9 +437,9 @@
 												callback="oncallback_sale"
 												total_amount="<?php echo $annual_tech->total_amount ?>"
 												order_number="<?php echo $annual_tech->order_number ?>"
-												xdata_1="123456"
-												xdata_2="34353"
-												xdata_3="Hello World, this is a comment, I have a limit of 80 characters.">
+												xdata_1="n/a"
+												xdata_2="n/a"
+												xdata_3="">
 											    <span> Buy Now </span>
 											</button>
 
@@ -478,8 +481,9 @@
 												<span> Please enter your info </span>
 											</div>
 
-											<input type="text" class="input-field" placeholder="Pay Number" />
-											<input type="text" class="input-field" placeholder="Lisence Number" />
+											<input type="text" class="modal-input-field" placeholder="Lisence Number" />
+											<input type="text" class="modal-input-field" placeholder="Pay Number" />
+											<textarea placeholder="Comments (80 Characters)" maxlength="80" class="modal-input-field"></textarea>
 										</div>
 
 										<div class="swp-modal-footer">
@@ -496,9 +500,9 @@
 												callback="oncallback_sale"
 												total_amount="<?php echo $annual_legal->total_amount ?>"
 												order_number="<?php echo $annual_legal->order_number ?>"							
-												xdata_1="123456"
-												xdata_2="34353"
-												xdata_3="Hello World, this is a comment, I have a limit of 80 characters.">
+												xdata_1="n/a"
+												xdata_2="n/a"
+												xdata_3="">
 											    <span> Buy Now </span>
 											</button>
 
@@ -540,8 +544,9 @@
 												<span> Please enter your info </span>
 											</div>
 
-											<input type="text" class="input-field" placeholder="Pay Number" />
-											<input type="text" class="input-field" placeholder="Lisence Number" />
+											<input type="text" class="modal-input-field" placeholder="Lisence Number" />
+											<input type="text" class="modal-input-field" placeholder="Pay Number" />
+											<textarea placeholder="Comments (80 Characters)" maxlength="80" class="modal-input-field"></textarea>
 										</div>
 
 										<div class="swp-modal-footer">
@@ -558,9 +563,9 @@
 												callback="oncallback_sale"
 												total_amount="<?php echo $annual_cma->total_amount ?>"
 												order_number="<?php echo $annual_cma->order_number ?>"
-												xdata_1="123456"
-												xdata_2="34353"
-												xdata_3="Hello World, this is a comment, I have a limit of 80 characters.">
+												xdata_1="n/a"
+												xdata_2="n/a"
+												xdata_3="">
 											    <span> Buy Now </span>
 											</button>
 
