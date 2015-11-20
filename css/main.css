@@ -183,6 +183,7 @@ border-right: 1px solid #D8D8D8;
 }
 
 
+
 .pay-content-box .pay-content-button:hover, 
 .swp-modal-open:hover,
 .pay-content-box .paypal_btn:hover {
@@ -358,8 +359,13 @@ border-right: 1px solid #D8D8D8;
 }
 
 .swp-modal-button:hover {
-	background-color: #208DEC
+	background-color: #208DEC;
+	
+	/* This is later changed through Javascript */
+	cursor: not-allowed;
 }
+
+
 
 .swp-modal-body {
 	margin: 10px 0px;

@@ -45,16 +45,33 @@ function oncallback_sale(response) {
 
 (function($) {
 
+	// ----------- Mini Validation ------------- //
+	// Ensures the users are actually entering numbers
 
 	var validate = {
-		"paynum_format" : new regEx('/\d{5}/'),
-		"paynumber" : function(string){
-			if(string.match(this.paynum_format)) {
-				alert("it matches");
-			} else {
-				alert("It dont match");
-			}
+		"paynumFormat" : /\d{5}/i,
+		"paynumber" : function(string) {
+				//Ensure that we deal with a string
+				string = string.toString();
+				return string.match(this.paynumFormat) ? true : false;
 		},
+
+		"licenseFormat" : /\d{6}/i,
+		"license_number" : function(string) {
+			//Convert input to string 
+			string = string.toString();
+			return string.match(this.licenseFormat) ? true : false;
+		},
+		"enableButton" : function() {
+			$('.swp-modal-button').attr('disabled', false);
+			$('.swp-modal-button').css('cursor', 'pointer');
+		},
+
+		"disableButton" : function() {
+			$('.swp-modal-button').attr('disabled', true);
+			$('.swp-modal-button').css('cursor', 'not-allowed');
+		}
+
 
 	}
 
@@ -65,6 +82,9 @@ function oncallback_sale(response) {
 // Each modal popup is going to have its own id
 $('.swp-modal_close').click(function(){
 	$('.swp-modal-popup').removeClass("fade-in");
+	$('.modal-input-field.xdata_1').val("");
+	$('.modal-input-field.xdata_2').val("");
+	$('.modal-input-field.xdata_3').val("");
 });
 
 
@@ -75,23 +95,53 @@ $('.swp-modal-open').click(function(){
 });
 
 
-// When the next button is clicked the payment page shows up.
+// When the next button is clicked. Show the Payment page.
+// Disable the button and clear all fields.
 $('.swp-modal-button').click(function(){
 	$('.swp-modal-popup').removeClass("fade-in");
+
+	$(this).attr('disabled', true);
+	$(this).css('cursor', 'not-allowed');
+	$('.modal-input-field.xdata_1').val("");
+	$('.modal-input-field.xdata_2').val("");
+	$('.modal-input-field.xdata_3').val("");
 });
 
 // When you enter text in modal popup, that info is carried over to the forte button
-$('.modal-input-field.xdata_1').keyup(function(e){
+$('.modal-input-field.xdata_1').keyup(function( e ) {
+
 	$('.swp-modal-button').attr('xdata_1', $(this).val());
+
+	if(validate.paynumber($('.modal-input-field.xdata_2').val()) && validate.license_number($('.modal-input-field.xdata_1').val()) ) {
+
+		validate.enableButton();
+
+	} else {
+
+		validate.disableButton();
+
+	}
+
 });
 
-$('.modal-input-field.xdata_2').keyup(function(e){
+$('.modal-input-field.xdata_2').keyup(function( e ){
 	$('.swp-modal-button').attr('xdata_2', $(this).val());
+
+	if(validate.paynumber($('.modal-input-field.xdata_2').val()) && validate.license_number($('.modal-input-field.xdata_1').val()) ) {
+
+		validate.enableButton();
+
+	} else {
+
+		validate.disableButton();
+
+	}
 });
 
 $('.modal-input-field.xdata_3').keyup(function(e) {
 	$('.swp-modal-button').attr('xdata_3', $(this).val());
 });
+
 
 //----------------------------------------------------
 

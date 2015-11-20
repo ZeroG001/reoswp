@@ -74,8 +74,8 @@
 											<div class="legend">
 												<span> Please enter your info </span>
 											</div>
-											<input type="text" class="modal-input-field xdata_1" placeholder="Lisence Number" />
-											<input type="text" class="modal-input-field xdata_2" placeholder="Pay Number" />
+											<input type="text" class="modal-input-field xdata_1" placeholder="Lisence Number" maxlength="6" />
+											<input type="text" class="modal-input-field xdata_2" placeholder="Pay Number" maxlength="5" />
 											<textarea class="modal-input-field xdata_3" maxlength="80" placeholder="Comments (80 Characters)"></textarea>
 										</div>
 
@@ -96,7 +96,8 @@
 												order_number="<?php echo $quick_pay->order_number ?>"
 												xdata_1="n/a"
 												xdata_2="n/a"
-												xdata_3="">
+												xdata_3="" 
+												disabled>
 											    </span>Next<span>
 											</button>
 
@@ -352,8 +353,8 @@
 											<div class="legend">
 												<span> Please enter your info </span>
 											</div>
-											<input type="text" class="modal-input-field" placeholder="Lisence Number" />
-											<input type="text" class="modal-input-field" placeholder="Pay Number" />
+											<input type="text" class="modal-input-field xdata_1" placeholder="Lisence Number" maxlength="6" />
+											<input type="text" class="modal-input-field xdata_2" placeholder="Pay Number" maxlength="5" />
 											<textarea placeholder="Comments (80 Characters)" maxlength="80" class="modal-input-field"></textarea>
 										</div>
 
@@ -374,7 +375,8 @@
 												order_number="<?php echo $annual_realtor->order_number ?>"
 												xdata_1="n/a"
 												xdata_2="n/a"
-												xdata_3="">
+												xdata_3=""
+												disabled>
 											    <span> Buy Now </span> 
 											</button>
 
@@ -418,8 +420,8 @@
 												<span> Please enter your info </span>
 											</div>
 
-											<input type="text" class="modal-input-field" placeholder="Lisence Number" />
-											<input type="text" class="modal-input-field" placeholder="Pay Number" />
+											<input type="text" class="modal-input-field xdata_1" placeholder="Lisence Number" maxlength="6" />
+											<input type="text" class="modal-input-field xdata_2" placeholder="Pay Number" maxlength="5" />
 											<textarea placeholder="Comments (80 Characters)" maxlength="80" class="modal-input-field"></textarea>
 										</div>
 
@@ -439,7 +441,8 @@
 												order_number="<?php echo $annual_tech->order_number ?>"
 												xdata_1="n/a"
 												xdata_2="n/a"
-												xdata_3="">
+												xdata_3=""
+												disabled>
 											    <span> Buy Now </span>
 											</button>
 
@@ -481,8 +484,8 @@
 												<span> Please enter your info </span>
 											</div>
 
-											<input type="text" class="modal-input-field" placeholder="Lisence Number" />
-											<input type="text" class="modal-input-field" placeholder="Pay Number" />
+											<input type="text" class="modal-input-field xdata_1" placeholder="Lisence Number" maxlength="6" />
+											<input type="text" class="modal-input-field xdata_2" placeholder="Pay Number" maxlength="5" />
 											<textarea placeholder="Comments (80 Characters)" maxlength="80" class="modal-input-field"></textarea>
 										</div>
 
@@ -502,7 +505,8 @@
 												order_number="<?php echo $annual_legal->order_number ?>"							
 												xdata_1="n/a"
 												xdata_2="n/a"
-												xdata_3="">
+												xdata_3=""
+												disabled>
 											    <span> Buy Now </span>
 											</button>
 
@@ -544,8 +548,8 @@
 												<span> Please enter your info </span>
 											</div>
 
-											<input type="text" class="modal-input-field" placeholder="Lisence Number" />
-											<input type="text" class="modal-input-field" placeholder="Pay Number" />
+											<input type="text" class="modal-input-field xdata_1" placeholder="Lisence Number" maxlength="6" />
+											<input type="text" class="modal-input-field xdata_2" placeholder="Pay Number" maxlength="5" />
 											<textarea placeholder="Comments (80 Characters)" maxlength="80" class="modal-input-field"></textarea>
 										</div>
 
@@ -565,7 +569,8 @@
 												order_number="<?php echo $annual_cma->order_number ?>"
 												xdata_1="n/a"
 												xdata_2="n/a"
-												xdata_3="">
+												xdata_3=""
+												disabled>
 											    <span> Buy Now </span>
 											</button>
 
