@@ -32,6 +32,8 @@ border-right: 1px solid #D8D8D8;
 	background-color: #EEEEEE;
 }
 
+/* ---- Flash Message Styles ---- */
+
 .pay-flash-message {
 	z-index: 40;
 	position: fixed;
@@ -91,9 +93,11 @@ border-right: 1px solid #D8D8D8;
 	transition: 0.5s ease;
 
 	display: block;
-	color: #3C763D;
+	/*color: #3C763D;*/
+	color: #4CAF50;
 	background-color: #DFF0D8;
 	border-color: #D6E9C6;
+	padding: 3rem;
 }
 
 .flash-message-danger {
@@ -107,6 +111,12 @@ border-right: 1px solid #D8D8D8;
 	color: #A94442;
 	background-color: #F2DEDE;
 	border-color: #EBCCD1;
+}
+
+.flash-message-img {
+	display: block;
+	text-align: center;
+	margin: 0px auto;
 }
 
 

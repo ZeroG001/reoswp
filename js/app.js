@@ -34,7 +34,7 @@ function oncallback_sale(response) {
 					// $('.pay-flash-message').attr('class', 'pay-flash-message');
 					$('.pay-flash-message').css('display', 'inline');
 					$('.pay-flash-message').addClass('flash-message-success');
-					$('.pay-flash-message').text('Thank You - Payment has been sent');
+					$('.pay-flash-message').html('<img src="img/checkmark_green.png" alt="success" /> <p> Thank You - Payment has been sent </p>');
 
 					// Fancy Fade animation
 					setTimeout(function(){
