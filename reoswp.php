@@ -34,7 +34,9 @@
 			<div class="sk-container">
 
 
-				<div class="pay-flash-message"> <!-- When transaction is complete user will see flash message --> </div>
+				<div class="pay-flash-message"> 
+					<!-- When transaction is complete user will see flash message --> 
+				</div>
 
 
 				<section class="pay_category">

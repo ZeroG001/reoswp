@@ -1,43 +1,57 @@
 function oncallback_sale(response) {
-			window.onmessage = function(event){
+			
 				console.log(event.data);
-				message = JSON.parse(event.data);
+				message = JSON.parse(response.data);
+
+				console.log(message.event);
+				console.log(typeof message.event);
 
 				if (message.event === "abort" ) {
 					// Alert div element shows how the event went. Then closes
-					$('.pay-flash-message').attr('class','pay-flash-message');
+					// $('.pay-flash-message').attr('class','pay-flash-message');
+					$('.pay-flash-message').css('display', 'inline');
 					$('.pay-flash-message').addClass('flash-message-notice');
 					$('.pay-flash-message').text('Transaction Canceled');
 
-					$('.pay-flash-message').css("opacity", "1");
-
+					// Fancy Fade animation
+					setTimeout(function(){
+						$('.pay-flash-message').css("opacity", "1");
+					},150);
 
 					setTimeout(function(){
 						$('.pay-flash-message').css("opacity", "0");
-						
 					}, 4000);
+
+					setTimeout(function(){
+						$('.pay-flash-message').css("display", "none");
+					}, 5000);
 
 				}
 
 				if (message.event === "success" ) {
 
 					// Alert div element shows how the event went. Then closes
-					$('.pay-flash-message').attr('class', 'pay-flash-message');
+					// $('.pay-flash-message').attr('class', 'pay-flash-message');
+					$('.pay-flash-message').css('display', 'inline');
 					$('.pay-flash-message').addClass('flash-message-success');
 					$('.pay-flash-message').text('Thank You - Payment has been sent');
 
-					$('.pay-flash-message').css("opacity", "1");
-
+					// Fancy Fade animation
+					setTimeout(function(){
+						$('.pay-flash-message').css("opacity", "1");
+					},150);
 
 					setTimeout(function(){
 						$('.pay-flash-message').css("opacity", "0");
-						
 					}, 4000);
+
+					setTimeout(function(){
+						$('.pay-flash-message').css("display", "none");
+					}, 5000);
 
 				}
 
-			}
-		}
+		} //oncallback_sale end
 
 		function oncallback_schedule(response) {
 			console.log(response);
