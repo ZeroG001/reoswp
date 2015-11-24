@@ -1,19 +1,16 @@
 function oncallback_sale(response) {
 			
-				console.log(event.data);
-				message = JSON.parse(response.data);
+				console.log( event.data );
+				message = JSON.parse( response.data );
 
-				console.log(message.event);
-				console.log(typeof message.event);
-
-				if (message.event === "abort" ) {
+				if ( message.event === "abort" ) {
 					// Alert div element shows how the event went. Then closes
 					// $('.pay-flash-message').attr('class','pay-flash-message');
 					$('.pay-flash-message').css('display', 'inline');
 					$('.pay-flash-message').addClass('flash-message-notice');
 					$('.pay-flash-message').text('Transaction Canceled');
 
-					// Fancy Fade animation
+					// Fancy Fade Animation
 					setTimeout(function(){
 						$('.pay-flash-message').css("opacity", "1");
 					},150);
@@ -28,7 +25,7 @@ function oncallback_sale(response) {
 
 				}
 
-				if (message.event === "success" ) {
+				if ( message.event === "success" ) {
 
 					// Alert div element shows how the event went. Then closes
 					// $('.pay-flash-message').attr('class', 'pay-flash-message');
@@ -36,7 +33,7 @@ function oncallback_sale(response) {
 					$('.pay-flash-message').addClass('flash-message-success');
 					$('.pay-flash-message').html('<img src="img/checkmark_green.png" alt="success" /> <p> Thank You - Payment has been sent </p>');
 
-					// Fancy Fade animation
+					// Fancy Fade Animation
 					setTimeout(function(){
 						$('.pay-flash-message').css("opacity", "1");
 					},150);
@@ -51,7 +48,7 @@ function oncallback_sale(response) {
 
 				}
 
-		} //oncallback_sale end
+		} //oncallback_sale End
 
 		function oncallback_schedule(response) {
 			console.log(response);
@@ -76,6 +73,7 @@ function oncallback_sale(response) {
 			string = string.toString();
 			return string.match(this.licenseFormat) ? true : false;
 		},
+
 		"enableButton" : function() {
 			$('.swp-modal-button').attr('disabled', false);
 			$('.swp-modal-button').css('cursor', 'pointer');
@@ -96,9 +94,15 @@ function oncallback_sale(response) {
 // Each modal popup is going to have its own id
 $('.swp-modal_close').click(function(){
 	$('.swp-modal-popup').removeClass("fade-in");
+
+	// Clear all form fields
 	$('.modal-input-field.xdata_1').val("");
 	$('.modal-input-field.xdata_2').val("");
 	$('.modal-input-field.xdata_3').val("");
+
+	//Disabled the Buy now button
+	$('.swp-modal-button').attr('disabled', true);
+	$('.swp-modal-button').css('cursor','not-allowed');
 });
 
 
