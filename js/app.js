@@ -89,9 +89,16 @@ function oncallback_sale(response) {
 
 
 // ------------------- Payment Modal ------------------------
-// Close modal when finished
 
-// Each modal popup is going to have its own id
+
+
+// ---- Modal Open ----
+$('.swp-modal-open').click(function(){
+	$(this).next('.swp-modal-popup').addClass('fade-in');
+});
+
+
+// ---- Modal Close ---
 $('.swp-modal_close').click(function(){
 	$('.swp-modal-popup').removeClass("fade-in");
 
@@ -105,55 +112,61 @@ $('.swp-modal_close').click(function(){
 	$('.swp-modal-button').css('cursor','not-allowed');
 });
 
-
-// Use CSS to display and close the
-// When Clicked. The modal next to the button is opened
-$('.swp-modal-open').click(function(){
-	$(this).next('.swp-modal-popup').addClass('fade-in');
-});
-
-
-// When the next button is clicked. Show the Payment page.
-// Disable the button and clear all fields.
+// ---- Modal Next Step ----
+// When the next or buy button is clicked. Forte's modal shows
+// Clean up the form before switching over
 $('.swp-modal-button').click(function(){
+
 	$('.swp-modal-popup').removeClass("fade-in");
 
-	$(this).attr('disabled', true);
-	$(this).css('cursor', 'not-allowed');
+	$('.swp-modal-button').attr('disabled', true);
+	$('.swp-modal-button').css('cursor','not-allowed');
 	$('.modal-input-field.xdata_1').val("");
 	$('.modal-input-field.xdata_2').val("");
 	$('.modal-input-field.xdata_3').val("");
 });
 
+
+// --- Modal Validation ----
 // When you enter text in modal popup, that info is carried over to the forte button
-$('.modal-input-field.xdata_1').keyup(function( e ) {
+$('.modal-input-field.xdata_1').one('focus', function() {
 
-	$('.swp-modal-button').attr('xdata_1', $(this).val());
+	$(this).keyup(function( e ) {
 
-	if(validate.paynumber($('.modal-input-field.xdata_2').val()) && validate.license_number($('.modal-input-field.xdata_1').val()) ) {
+		$('.swp-modal-button').attr('xdata_1', $(this).val());
 
-		validate.enableButton();
+		if(validate.paynumber($(this).next('.modal-input-field.xdata_2').val()) && validate.license_number($(this).val()) ) {
 
-	} else {
+			validate.enableButton();
+			
+		} else {
+			validate.disableButton();
+		}
 
-		validate.disableButton();
+		
 
-	}
+	});
 
 });
 
-$('.modal-input-field.xdata_2').keyup(function( e ){
-	$('.swp-modal-button').attr('xdata_2', $(this).val());
 
-	if(validate.paynumber($('.modal-input-field.xdata_2').val()) && validate.license_number($('.modal-input-field.xdata_1').val()) ) {
+$('.modal-input-field.xdata_2').one('focus', function() {
 
-		validate.enableButton();
+	$(this).keyup(function( e ) {
 
-	} else {
+		$('.swp-modal-button').attr('xdata_2', $(this).val());
 
-		validate.disableButton();
+		if(validate.paynumber($(this).val()) && validate.license_number($(this).prev('.modal-input-field.xdata_1').val()) ) {
 
-	}
+			validate.enableButton();
+			
+		} else {
+			validate.disableButton();
+		}
+
+		
+	});
+
 });
 
 $('.modal-input-field.xdata_3').keyup(function(e) {
@@ -162,9 +175,5 @@ $('.modal-input-field.xdata_3').keyup(function(e) {
 
 
 //----------------------------------------------------
-
-
-
-
 
 })(jQuery)
